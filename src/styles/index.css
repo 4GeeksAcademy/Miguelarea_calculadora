@@ -1,11 +1,82 @@
-/* 
+.calculator {
+  background: #2c2c54;
+  padding: 20px;
+  border-radius: 15px;
+  margin: 40px auto;
+  width: fit-content;
+  max-width: 100%;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+}
 
-    You can write your own styles here...
-    
-    
-    ...Or you can use the import command to include 
-    other sylesheets into your bunde as well, e.j:
-    
-    import 'relative/path/to/stylesheet.scss';
+.display {
+  background: #1e1e2f;
+  color: white;
+  font-size: 2.5rem;
+  padding: 20px;
+  border-radius: 10px;
+  text-align: right;
+  margin-bottom: 15px;
+  min-height: 50px;
+  overflow-x: auto;
+}
 
-*/
+.buttons {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 10px;
+}
+
+button {
+  background: #4834d4;
+  color: white;
+  font-size: 1.5rem;
+  padding: 20px;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: 0.2s;
+  width: 100%;
+}
+
+button:hover {
+  background: #686de0;
+}
+
+.equal {
+  background: #eb4d4b;
+}
+
+.equal:hover {
+  background: #ff7979;
+}
+
+.history {
+  color: #ccc;
+  font-size: 0.9rem;
+  margin-bottom: 10px;
+  max-height: 100px;
+  overflow-y: auto;
+}
+
+.history-line {
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+  padding: 2px 0;
+}
+
+/* Responsive */
+@media (max-width: 400px) {
+  .calculator {
+    width: 90%;
+    padding: 10px;
+  }
+
+  button {
+    font-size: 1.2rem;
+    padding: 15px;
+  }
+
+  .display {
+    font-size: 2rem;
+    padding: 15px;
+  }
+}
